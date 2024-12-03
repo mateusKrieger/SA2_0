@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+ <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S A</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  
+</head>
+<body>
+
+<header>
+    <h1>InovaTech Solutions</h1>
+    <p>Bem-vindo ao nosso espaço de conhecimento!</p>
+</header>
+
+<nav>
+    <a href="index.html">Página Inicial</a>
+    <a href="eletroeletronica.html">Eletroeletrônica</a>
+    <a href="redes.html">Redes</a>
+    <a href="banco_de_dados.html">Banco de Dados</a>
+    <a href="algoritmos.html">Algoritmos e Fluxogramas</a>
+    <a href="programacao.html">Programação</a>
+</nav>
+
+<div class="container">
+    <div id="home" class="content">
+        <h2>Resistores e Código de Cores</h2>
+        <p>Os resistores são componentes eletrônicos que limitam a corrente elétrica em um circuito. Seu valor é medido em ohms (Ω) e indicado por um código de cores:
+
+            Faixas de cores: Cada faixa corresponde a um número (ou tolerância).
+            1ª e 2ª faixas: Dígitos significativos.
+            3ª faixa: Multiplicador (potência de 10).
+            4ª faixa: Tolerância (ex.: ±5%).
+            Exemplo: Um resistor com faixas marrom (1), preto (0), vermelho (×100) e dourado (±5%) tem valor de 1 kΩ (1000 ohms) com tolerância de ±5%.
+             <br>
+             <br>
+
+             <div class="image-container">
+                <img src="3-faixas-600.JPG" width="100px" height="100px"  alt="">
+                <div class="caption">Código de Cores</div>
+            </div>
+            </p>
+            
+                    <div class="container">
+                        <div id="home" class="content">
+                            <h2>Diodo LED e display de sete segmentos</h2>
+                            <p>Diodo LED: Emite luz quando polarizado corretamente. Possui dois terminais:
+                                Anodo (+): Deve estar conectado ao positivo.
+                                Catodo (-): Conectado ao negativo.
+                                Display de Sete Segmentos: Um conjunto de LEDs configurados em formato de “8”, usado para exibir números ou caracteres simples.
+                                Comum Anodo: Todos os anodos conectados juntos.
+                                Comum Catodo: Todos os catodos conectados juntos.</p>
+                                <br><br>
+
+                                <div class="container">
+                                    <div id="home" class="content">
+                                        <h2>placa arduíno</h2>
+                                        <p>O Arduino é uma plataforma de hardware de código aberto com um microcontrolador programável. Exemplos incluem Arduino Uno, Mega e Nano. Usado para projetos de automação, IoT, prototipagem e ensino.
+  <br><br>
+                                            <div class="image-container">
+                                                <img src="800px-A000066_featured_4.jpg" width="100px" height="100px"  alt="">
+                                                <div class="caption">Placa arduíno</div>
+                                            </div>
+                                            
+                                    <br><br>
+                                        <div class="container">
+                                            <div id="home" class="content">
+                                                <h2> Programa no IDE Arduino</h2>
+                                                <p>A IDE Arduino é onde você escreve, compila e faz upload de códigos para a placa.
+        <br>
+                                                    Estrutura básica:
+                                                    
+                                                    setup(): Configurações iniciais (executa uma vez).
+                                                    loop(): Código que roda continuamente.</p>
+
+                                                    <div class="container">
+                                                        <div id="home" class="content">
+                                                            <h2>Entrada e Saída no Arduino</h2>   
+                                                            <h3>Entrada Analógica no Arduino</h3>
+                                                            <p>Usa os pinos A0-A5 para ler sinais variáveis (ex.: sensores de temperatura ou potenciômetros). <br>
+                                                                Exemplo:
+                                                                <hr>
+                                                                <br>
+                                                                cpp <br>
+                                                                Copiar código <br>
+                                                                int sensorValue; <br>
+                                                                
+                                                                void setup() {  <br>
+                                                                Serial.begin(9600); <br>
+                                                                } <br>
+                                                                
+                                                                void loop() { <br>
+                                                                sensorValue = analogRead(A0); <br>
+                                                                Serial.println(sensorValue); <br>
+                                                                delay(500); <br>
+                                                                }</p>
+
+                                                                <h3>Entrada Digital no Arduino</h3>
+                                                                <p>Lê sinais de dispositivos que retornam ALTO (HIGH) ou BAIXO (LOW) (ex.: botões).
+                                                                    Exemplo:
+                                                                    <br>
+                                                                    <hr>
+                                                                    cpp <br>
+                                                                    Copiar código <br>
+                                                                    int buttonState; <br>
+                                                                    
+                                                                    void setup() { <br>
+                                                                    pinMode(2, INPUT); <br>
+                                                                    } <br>
+                                                                    
+                                                                    void loop() { <br>
+                                                                    buttonState = digitalRead(2); <br>
+                                                                    } <br>
+                                                                    </p>
+                                                                        
+                                                                    <h3>Saída Analógica no Arduino (PWM)</h3>
+                                                                    <p>Os pinos com símbolo ˜ podem emitir PWM para controlar intensidade de LEDs ou motores. <br><br>
+                                                                        Exemplo: <br><br><hr>
+                                                                        
+                                                                        cpp <br>
+                                                                        Copiar código <br>
+                                                                        void setup() {} <br>
+                                                                        
+                                                                        void loop() { <br>
+                                                                        analogWrite(9, 128); // Controla a intensidade do LED <br>
+                                                                        delay(1000); <br>
+                                                                        } <br>
+                                                                        Saída Digital no Arduino <br>
+                                                                        Liga/desliga dispositivos como LEDs ou relés. <br>
+                                                                        Exemplo: <br>
+                                                                        <br>
+                                                                        cpp <br>
+                                                                        Copiar código <br>
+                                                                        void setup() { <br>
+                                                                        pinMode(13, OUTPUT); <br>
+                                                                        }
+                                                                        
+                                                                        void loop() { <br>
+                                                                        digitalWrite(13, HIGH); <br>
+                                                                        delay(1000); <br>
+                                                                        digitalWrite(13, LOW); <br>
+                                                                        delay(1000); <br>
+                                                                        }</p>
+                                                                        
+                                                                        <h3>Saída digital no Arduino</h3>
+                                                                        <p>A saída digital no Arduino é usada para controlar dispositivos que têm dois estados: LIGADO (HIGH) ou DESLIGADO (LOW). Exemplos de dispositivos incluem LEDs, relés, motores (com driver), entre outros <br>
+                                                                            Exemplo:
+                                                                            <br><br><hr>
+                                                                            <br>
+                                                                            // Define o pino do LED<br>
+                                                                            const int ledPin = 13;<br>
+        <br>
+                                                                            void setup() {<br>
+                                                                            // Configura o pino 13 como saída<br>
+                                                                            pinMode(ledPin, OUTPUT);<br>
+                                                                            }
+        <br>
+                                                                            void loop() {<br>
+                                                                            // Liga o LED<br>
+                                                                            digitalWrite(ledPin, HIGH);<br>
+                                                                            delay(1000); // Aguarda 1 segundo<br>
+
+                                                                            // Desliga o LED<br>
+                                                                            digitalWrite(ledPin, LOW);<br>
+                                                                            delay(1000); // Aguarda 1 segundo<br>
+                                                                            }<br>
+        <br>
+
+                                                                        </p>
+
+                                           
+                                            <div class="container">
+                                                <div id="home" class="content">
+                                                    <h2>Multímetro – O Que é e Para Que Serve</h2>   
+                                                    <p>O multímetro é um instrumento usado para medir grandezas elétricas como tensão (V), corrente (A) e resistência (Ω). <br>Pode ser: <br>
+<br>
+                                                        Digital: Mostra valores em uma tela <br>
+                                                        Analógico: Usa um ponteiro para mostrar leituras.
+                                                    
+                                                    <br>
+             <div class="image-container">
+                <img src="multimetro-digitalet-1505.jpg" width="100px" height="100px"  alt="">
+                <div class="caption">Multimetro</div>
+            </div>
+            </p>
+
+                                            <div class="container">
+                                                <div id="home" class="content">
+                                                    <h2>Unidades de Medida no Multímetro</h2>   
+                                                    <p>1. Tensão (Voltagem) – V <br>
+                                                        DC (Corrente Contínua): Medir pilhas, baterias, fontes. <br>
+                                                        AC (Corrente Alternada): Tomadas e circuitos residenciais. <br><br>
+                                                        2. Corrente – A 
+                                                        Mede o fluxo de carga elétrica. <br>
+                                                         
+                                                        DC ou AC. <br><br>
+                                                        3. Resistência – Ω <br>
+                                                        Determina a oposição ao fluxo de corrente elétrica. <br>
+                                                         <br>
+                                                        4. Continuidade <br>
+                                                        Testa se há conexão entre dois pontos. Emite som se estiver conectado. <br>
+                                                         <br>
+                                                        5. Capacitância e Diodo (Funções Extras) <br>
+                                                        Mede a capacidade de capacitores ou verifica o estado de diodos. <br>
+                                                         <br>
+                                                        Com essas informações, você pode montar e testar circuitos com confiança! 🚀 
+
+                                          
+
+
+
+
+
+
+
+
+
+
+
+

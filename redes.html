@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuração de Rede Interna</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+   
+</head>
+<body>
+
+<header>
+    <h1>Configuração de Rede Interna</h1>
+    <p>Elementos e Componentes de Rede com Servidor Web</p>
+</header>
+
+<nav>
+    <a href="index.html">Página Inicial</a>
+    <a href="eletroeletronica.html">Eletroeletrônica</a>
+    <a href="redes.html">Redes</a>
+    <a href="banco_de_dados.html">Banco de Dados</a>
+    <a href="#algoritmos">Algoritmos e Fluxogramas</a>
+    <a href="programacao.html">Programação</a>
+</nav>
+
+<div class="container">
+    <div id="elementos" class="content">
+        <h2>Elementos da Rede</h2>
+        <ul>
+            <li><strong>Switch:</strong> Faz a conexão entre os dispositivos dentro da rede local (LAN).</li>
+            <li><strong>Roteador:</strong> Conecta a rede local à internet ou outra rede externa.</li>
+            <li><strong>Servidor:</strong> Responsável por fornecer serviços como DNS, HTTP e DHCP.</li>
+            <li><strong>Clientes:</strong> Computadores ou dispositivos que consomem os serviços fornecidos pelo servidor.</li>
+            <li><strong>Cabos de Rede:</strong> Conectam os dispositivos fisicamente.</li>
+             <br>
+             <br>
+             <h2> Configuração no Cisco Packet Tracer:</h2>
+            <li>Conecte o roteador ao switch com cabo Straight-Through.</li>
+            <li>Conecte o servidor e os PCs ao switch.</li>
+            <li>Configure o servidor com IP estático.</li>
+            <li>Configure os serviços DNS, HTTP e DHCP no servidor.</li>
+            <li>Configure os PCs para obter IP automaticamente (DHCP) ou configure manualmente.</li>
+        </ul>
+    </div>
+
+    <div id="configuracao" class="content">
+        <h2>Configuração dos Servidores</h2>
+
+        <h3>Servidor de Domínio (DNS):</h3>
+<h3  >Função: Traduz nomes de domínio (ex.: www.exemplo.com) em endereços IP.</h3  >
+<h3>Passos no Packet Tracer:</h2>
+<ul>
+    <li>Abra o servidor. </li>
+    <li> Habilite o serviço DNS.</li>
+    <li> Adicione registros DNS:</li>
+    <li>Nome do domínio: www.exemplo.com </li>
+    <li>Endereço IP: 192.168.1.100 </li>
+
+    <h2>Servidor de Comunicação Web (HTTP): </h2>
+    <h3>Função: Oferece páginas e serviços web acessíveis por navegadores. </h3>
+    <h4>Passos no Packet Tracer:</h4>
+    <li>No servidor, habilite o serviço HTTP e/ou HTTPS.</li>
+    <li>Configure a página inicial no editor interno do Packet Tracer.</li>
+
+    <h2>Servidor DHCP:</h2>
+    <h3>Função: Atribui automaticamente IP, máscara de sub-rede, gateway e DNS aos dispositivos na rede.</h3>
+<h4>Passos no Packet Tracer:</h4>
+<li>Habilite o serviço DHCP no servidor.</li>
+<li>Configure o escopo de endereçamento:</li>
+<li>Faixa de IP: 192.168.1.10 - 192.168.1.50</li>
+<li>Máscara de sub-rede: 255.255.255.0</li>
+<li>
+    Gateway padrão: 192.168.1.1</li>
+<li>DNS: 192.168.1.100</li>
+</ul>
+</div>
+
+<div class="container">
+    <div id="elementos" class="content">
+<h2>Equipamentos Aplicados em Redes: Funções e Configuração</h2>
+<h3>Roteador:
+</h3>
+<li>
+    Função: Direciona pacotes entre redes distintas.</li>
+<li>Configuração: Atribua IPs às interfaces, configure NAT e roteamento estático/dinâmico.
+
+    </li>
+
+    <h3>   Switch:</h3>
+<li>Função: Conecta dispositivos da mesma LAN.</li>
+<li>Configuração: Crie VLANs para segmentação de rede.</li>
+
+<h3>Servidor:</h3>
+<li>Função: Fornece serviços como DNS, DHCP e HTTP.</li>
+<li>Configuração: Ajuste os serviços desejados conforme necessário.</li>
+
+<h3>Access Point:
+</h3>
+<li>Função: Fornece conectividade Wi-Fi aos dispositivos.</li>
+<li>Configuração: Configure o SSID e segurança (ex.: WPA2).</li>
+
+<h3>Firewall:</h3>
+
+<li>Função: Protege a rede ao filtrar pacotes e bloquear ameaças.</li>
+<li>Configuração: Defina regras de permissão e bloqueio para IPs e portas.</li>
+</div>
+
+
+<div class="container">
+    <div id="elementos" class="content">
+        <h2>Conceitos de Servidor e Protocolos</h2>
+        <h3>Servidor:</h3>
+<li
+>Computador ou dispositivo que oferece serviços a outros dispositivos (clientes) em uma rede.</li
+    >
+
+<h3>DNS (Domain Name System):</h3>
+<li>Converte nomes de domínio legíveis (ex.: google.com) em endereços IP (ex.: 142.250.64.110).</li>
+
+
+<h3>HTTP (Hypertext Transfer Protocol):</h3>
+<li>Protocolo para transferência de dados web. Utiliza portas 80 (HTTP) e 443 (HTTPS).</li>
+
+<h3>DHCP (Dynamic Host Configuration Protocol):</h3>
+<li>Protocolo que distribui automaticamente endereços IP, máscara de sub-rede, gateway e DNS para os dispositivos conectados à rede.</li>
+</div>
+<div class="container">
+    <div id="elementos" class="content">
+        <h2>Pinagem de Cabo de Rede:</h2>
+        <h4>    
+            Padrão T568B (Cabo Direto)</h4>
+        <li>Pinos:</li>
+        <li>Branco-Laranja</li>
+        <li>  
+            Laranja</li>
+        <li>Branco-Verde</li>
+        <li> Azul</li>
+        <li> Branco-Azul</li>
+        <li> Verde</li>
+        <li> Branco-Marrom</li>
+        <li>
+            Marrom</li>
+            <HR></HR>
+            <BR></BR>
+        <img width="500px" height="500px" src="Imagem do WhatsApp de 2024-11-27 à(s) 17.03.41_186d7cd3.jpg" alt="Foto da crimpagem">
+    </div>
+
+    <div class="container">
+<div id="Elementos" class="content">
+    <h2> Modelo OSI e TCP/IP</h2>
+    <br>
+   <h3>Modelo OSI (Open Systems Interconnection):</h3>
+<h5>Divide a comunicação em 7 camadas:</h5>
+<li>Física: Transmissão de bits.</li>
+<li>Enlace: Comunicação entre dispositivos locais.</li>
+<li>Rede: Roteamento de pacotes (ex.: IP).</li>
+<li>Transporte: Controle de fluxo e erros (ex.: TCP, UDP).</li>
+<li>Sessão: Gerencia conexões.</li>
+<li>Apresentação: Formata os dados (ex.: criptografia).</li>
+<li>Aplicação: Interface com o usuário (ex.: HTTP, FTP).</li>
+
+
+
+<H2>Modelo TCP/IP:</H2>
+<br>
+<h3>Modelo de comunicação usado na internet, com 4 camadas:</h3>
+<li>Rede (Acesso): Combina as camadas física e de enlace do OSI.</li>
+<li>Internet: Equivale à camada de rede (IP, ICMP).</li>
+<li>Transporte: Gerencia dados entre dispositivos (TCP, UDP).</li>
+<li>Aplicação: Oferece serviços diretamente ao usuário (HTTP, DNS, FTP).</li>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
